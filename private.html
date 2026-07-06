@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Travel - DreamWay Travels</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body { background: #fff; color: #111; }
+    .page-banner { padding: 60px 5%; text-align: center; }
+    .page-banner h1 { font-size: 42px; color: #ffdd57; position: relative; display: inline-block; margin-bottom: 40px; }
+    .page-banner h1::after { content: ''; width: 50%; height: 4px; background: #ffdd57; display: block; margin: 8px auto 0; border-radius: 2px; }
+
+    .features-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0; }
+    .feature-box {
+      flex: 1 1 250px; max-width: 280px;
+      background: linear-gradient(135deg, #fff8e1, #ffebcd);
+      border-radius: 20px; padding: 30px 20px; text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-box:hover { transform: translateY(-15px) rotate(-1deg); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+
+    .feature-icon {
+      font-size: 50px; color: #ffdd57;
+      background: radial-gradient(circle, #ffd54f, #ffca28);
+      width: 80px; height: 80px; line-height: 80px; margin: 0 auto 15px;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+    .feature-box:hover .feature-icon { transform: scale(1.2) rotate(10deg); }
+
+    .feature-box h3 { font-size: 22px; margin-bottom: 12px; color: #333; position: relative; }
+    .feature-box h3::after { content: ''; width: 40px; height: 3px; background: #ffdd57; display: block; margin: 5px auto 0; border-radius: 2px; }
+
+    .feature-box p { font-size: 14px; color: #555; line-height: 1.5; }
+
+    .book-btn { display: inline-block; margin: 40px 0; padding: 15px 40px; background: linear-gradient(45deg, #ffdd57, #ffc107); color: #111; font-weight: 600; border-radius: 35px; text-decoration: none; transition: 0.3s, box-shadow 0.3s; }
+    .book-btn:hover { background: linear-gradient(45deg, #ffc107, #ffca28); box-shadow: 0 8px 25px rgba(255, 221, 87, 0.6); }
+
+    /* Responsive */
+    @media screen and (max-width: 900px) { .features-grid { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header (same as homepage) -->
+  <header class="top-header">
+    <div class="logo">
+      <h2>DreamWay Travels</h2>
+      <p>Your Journey, Your Story</p>
+    </div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="Book Now.html">Book Now</a>
+      <div class="profile-menu">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.mpXg7tyCFEecqgUsoW9eQwHaHk?pid=Api&P=0&h=220" class="profile-icon" onclick="toggleProfileMenu()">
+        <div class="profile-dropdown" id="profileDropdown">
+          <button onclick="openLogin()">Login</button>
+          <button onclick="openSignup()">Signup</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <h1>Private Travel Features</h1>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features-grid">
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-car-side"></i></div>
+      <h3>Sedan – 4/7 Seater</h3>
+      <p>perfect for small/bigger families and couples and long journeys.</p>
+    </div>
+   
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-gem"></i></div>
+      <h3>Luxury Car</h3>
+      <p>Premium experience for special occasions.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-shuttle-van"></i></div>
+      <h3>Traveller – 12/17 Seater</h3>
+      <p>Spacious vehicle for larger groups.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-plane"></i></div>
+      <h3>Airport Pickup & Drop</h3>
+      <p>Safe, reliable, and on-time service.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-route"></i></div>
+      <h3>Outstation Private Trip</h3>
+      <p>Comfortable long-distance travel with expert drivers.</p>
+    </div>
+  </section>
+
+  <div style="text-align:center;">
+    <a href="Book Now.html" class="book-btn">Book Now</a>
+  </div>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="footer">
+    <div class="footer-box">
+      <h3>DreamWay Travels</h3>
+      <p>Turning moments into memories.</p>
+    </div>
+    <div class="footer-box">
+      <h4>Useful Links</h4>
+      <a href="destinations.html">Destination</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="Book Now.html">Book Now</a>
+    </div>
+    <div class="footer-box">
+      <h4>Contact</h4>
+      <p>Pune, India</p>
+      <p>dreamwaytravel@gmail.com</p>
+      <p>+91 9876543210</p>
+    </div>
+  </footer>
+
+</body>
+</html>

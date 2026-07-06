@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamWay Travels - Packages</title>
+  <link rel="stylesheet" href="packages.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="top-header">
+  <div class="logo">
+    <h2>DreamWay Travels</h2>
+    <p>Your Journey, Your Story</p>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="Book Now.html">Book Now</a>
+
+    <!-- PROFILE ICON -->
+    <div class="profile-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="profile-icon" onclick="toggleProfileMenu()">
+
+      <div class="profile-dropdown" id="profileDropdown">
+        <button onclick="openLogin()">Login</button>
+        <button onclick="openSignup()">Signup</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Explore Our Premium Packages</h1>
+  </div>
+</section>
+
+<!-- ===================== PACKAGES ===================== -->
+<section class="section">
+  <h2 class="section-title">
+    Best <span class="highlight">Tour Packages</span>
+  </h2>
+
+  <div class="card-row">
+
+    <!-- GOA -->
+    <div class="card" onclick="openItinerary('goa')">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/3e/36/95/baga-sea-beach.jpg?w=500&h=500&s=1">
+      <h3>Goa Beach Paradise</h3>
+      <p>3 Nights | ₹12,999</p>
+    </div>
+
+    <!-- LADAKH -->
+    <div class="card" onclick="openItinerary('ladakh')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsMMJaHfcHCWbtIgOA9ec4e1CU0w09F2ittA&s">
+      <h3>Ladakh Adventure</h3>
+      <p>5 Nights | ₹24,499</p>
+    </div>
+
+    <!-- JAIPUR -->
+    <div class="card" onclick="openItinerary('jaipur')">
+      <img src="https://s7ap1.scene7.com/is/image/incredibleindia/hawa-mahal-jaipur-rajasthan-city-1-hero?qlt=82&ts=1742200253577">
+      <h3>Pink City Tour</h3>
+      <p>3 Nights | ₹10,999</p>
+    </div>
+
+    <!-- KERALA -->
+    <div class="card" onclick="openItinerary('kerala')">
+      <img src="https://res.cloudinary.com/enchanting/q_80,f_auto,c_lfill,x_w_mul_0.36,y_h_mul_0.63,g_xy_center,w_360,h_270/exodus-web/2025/04/Kerala-GettyImages-2171879633.jpg">
+      <h3>Kerala Backwaters</h3>
+      <p>4 Nights | ₹18,999</p>
+    </div>
+
+    <!-- ANDAMAN -->
+    <div class="card" onclick="openItinerary('andaman')">
+      <img src="https://dekhoandaman.com/wp-content/uploads/2020/11/h3-img-11_optimized-873x450.png">
+      <h3>Andaman Islands</h3>
+      <p>5 Nights | ₹29,999</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== ITINERARY POPUP ===================== -->
+<div class="modal" id="itineraryModal">
+  <div class="modal-box" id="itineraryContent">
+    <h2>Itinerary</h2>
+    <p>Loading...</p>
+
+    <button class="btn-submit" onclick="closeItinerary()">Close</button>
+
+    <span class="close" onclick="closeItinerary()">×</span>
+  </div>
+</div>
+
+<!-- LOGIN MODALS SAME AS HOME -->
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="btn-submit">Login</button>
+    <span class="close" onclick="closeLogin()">×</span>
+  </div>
+</div>
+
+<div class="modal" id="signupModal">
+  <div class="modal-box">
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="btn-submit">Create</button>
+    <span class="close" onclick="closeSignup()">×</span>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-box">
+    <h3>DreamWay Travels</h3>
+    <p>Turning moments into memories.</p>
+  </div>
+
+  <div class="footer-box">
+    <h4>Useful Links</h4>
+    <a href="index.html">Home</a>
+    <a href="Destinations.html">Destination</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="Book Now.html">Book Now</a>
+  </div>
+
+  <div class="footer-box">
+    <h4>Contact</h4>
+    <p>Pune, India</p>
+    <p>dreamwaytravel@gmail.com</p>
+    <p>+91 9876543210</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+/* ----- ITINERARY DATA ----- */
+const itineraries = {
+  goa: `
+    <h2>Goa – 5 Days Tour</h2>
+    <p><b>Day 1:</b> Arrival & Calangute Beach</p>
+    <p><b>Day 2:</b> North Goa Sightseeing</p>
+    <p><b>Day 3:</b> South Goa + Old Churches</p>
+    <p><b>Day 4:</b> Water Sports</p>
+    <p><b>Day 5:</b> Shopping & Return</p>
+  `,
+  ladakh: `
+    <h2>Ladakh – 5 Days Tour</h2>
+    <p><b>Day 1:</b> Leh Arrival</p>
+    <p><b>Day 2:</b> Sham Valley</p>
+    <p><b>Day 3:</b> Nubra Valley</p>
+    <p><b>Day 4:</b> Pangong Lake</p>
+    <p><b>Day 5:</b> Return</p>
+  `,
+  jaipur: `
+    <h2>Jaipur – 3 Days Tour</h2>
+    <p><b>Day 1:</b> Hawa Mahal</p>
+    <p><b>Day 2:</b> Amer Fort</p>
+    <p><b>Day 3:</b> City Palace</p>
+  `,
+  kerala: `
+    <h2>Kerala – 4 Days Tour</h2>
+    <p><b>Day 1:</b> Kochi City</p>
+    <p><b>Day 2:</b> Munnar</p>
+    <p><b>Day 3:</b> Alleppey Houseboat</p>
+    <p><b>Day 4:</b> Return</p>
+  `,
+  andaman: `
+    <h2>Andaman – 5 Days Tour</h2>
+    <p><b>Day 1:</b> Port Blair</p>
+    <p><b>Day 2:</b> Havelock Island</p>
+    <p><b>Day 3:</b> Radhanagar Beach</p>
+    <p><b>Day 4:</b> Water Activities</p>
+    <p><b>Day 5:</b> Return</p>
+  `
+};
+
+/* OPEN ITINERARY */
+function openItinerary(place) {
+  document.getElementById('itineraryContent').innerHTML =
+    itineraries[place] +
+    `<button class="btn-submit" onclick="closeItinerary()">Close</button>`;
+  document.getElementById('itineraryModal').style.display = "flex";
+}
+
+function closeItinerary() {
+  document.getElementById('itineraryModal').style.display = "none";
+}
+</script>
+
+</body>
+</html>

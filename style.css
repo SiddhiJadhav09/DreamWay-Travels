@@ -1,0 +1,363 @@
+/* ===================== GLOBAL STYLES ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('https://wallpaperaccess.com/full/1896134.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===================== HEADER ===================== */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #ffdd57;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #eee;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===================== PROFILE MENU ===================== */
+.profile-menu {
+  position: relative;
+}
+
+.profile-icon {
+  width: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.profile-dropdown p {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffdd57;
+}
+
+.profile-dropdown button {
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  margin-bottom: 50px;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px #000;
+  margin-bottom: 20px;
+}
+
+.hero-buttons a {
+  margin: 0 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn1 {
+  background: rgba(255, 221, 87, 0.8);
+  color: #000;
+}
+
+.btn1:hover {
+  background: rgba(255, 221, 87, 1);
+}
+
+.btn2 {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn2:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #ffdd57;
+}
+
+/* ===================== AUTO SLIDER ===================== */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  animation: slideAnim 18s linear infinite;
+}
+
+.slide {
+  min-width: 300px;
+}
+
+@keyframes slideAnim {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===================== CARDS (TOURS & TRAINS) ===================== */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ===================== TESTIMONIALS ===================== */
+.testimonials .testimonial-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testi-box {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  width: 280px;
+  font-style: italic;
+}
+
+
+/* ===================== MODALS ===================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-box {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-box h2 {
+  margin-bottom: 20px;
+}
+
+.modal-box input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.modal-box input::placeholder {
+  color: #ddd;
+}
+
+.btn-submit {
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 221, 87, 0.9);
+  font-weight: bold;
+  color: #000;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: rgba(255, 221, 87, 1);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  padding: 40px 5%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.footer-box h3, .footer-box h4 {
+  margin-bottom: 15px;
+  color: #ffdd57;
+}
+
+.footer-box a {
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ffdd57;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media screen and (max-width: 900px) {
+  .card-row, .testimonial-row, .blog-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+/* ===================== TRAVEL OPTIONS ===================== */ 
+.travel-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; } 
+.travel-card { width: 320px; background: rgba(255,255,255,0.05); 
+  backdrop-filter: blur(12px); border-radius: 20px; overflow: hidden; text-align: center; color: white; 
+  padding-bottom: 20px; transition: 0.3s; } .travel-card img { width: 100%; height: 200px; object-fit: cover; } 
+  .travel-card h3 { margin-top: 15px; font-size: 22px; } 
+  .travel-card p { padding: 10px 20px; font-size: 14px; color: #eee; } 
+  .travel-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }

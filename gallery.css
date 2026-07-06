@@ -1,0 +1,194 @@
+/* ===================== HEADER ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #ffdd57;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #eee;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+  background: rgba(255,255,255,0.1);
+  color: #ffdd57;
+}
+
+/* ===================== TRAVEL DROPDOWN ===================== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 140px;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  color: white;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===================== PROFILE DROPDOWN ===================== */
+.profile-menu {
+  position: relative;
+}
+
+.profile-icon {
+  width: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffdd57;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.profile-dropdown button {
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ===================== GALLERY ===================== */
+.gallery-banner {
+  text-align: center;
+  padding: 70px 0;
+  background: url('https://images.pexels.com/photos/247478/pexels-photo-247478.jpeg?cs=srgb&dl=dawn-landscape-mountains-247478.jpg&fm=jpg') center/cover;
+  color: white;
+}
+
+.gallery-banner h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.gallery-banner p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Gallery Grid */
+.gallery-section {
+  padding: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* ===================== FOOTER ===================== */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  padding: 40px 5%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.footer-box h3, .footer-box h4 {
+  margin-bottom: 15px;
+  color: #ffdd57;
+}
+
+.footer-box a {
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ffdd57;
+}

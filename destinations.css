@@ -1,0 +1,347 @@
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #ffdd57;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #eee;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===================== PROFILE MENU ===================== */
+.profile-menu {
+  position: relative;
+}
+
+.profile-icon {
+  width: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffdd57;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.profile-dropdown button {
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ========== Destinations CSS (matches homepage) ========== */
+
+/* Use the same base rules you provided (Poppins, Playfair Display). 
+   If your site already loads fonts, it's fine. */
+
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Poppins', sans-serif; }
+body {
+  /* keep your homepage background (it will blend) */
+  background: url('https://wallpaperaccess.com/full/2852034.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+
+/* Header uses same style you gave */
+.top-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 5%;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top:0;
+  z-index:1000;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.logo h2 { font-family: 'Great Vibes', cursive; font-size:28px; color:#ffdd57; }
+.logo p { font-size:12px; color:#eee; }
+
+/* Banner */
+.destination-banner {
+  height: 40vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  text-align:center;
+}
+.destination-banner h1 {
+  font-family:'Playfair Display', serif;
+  color:#ffdd57;
+  font-size:48px;
+  text-shadow:2px 2px 10px #000;
+}
+
+/* Section */
+.destination-section { padding: 50px 5%; text-align:center; }
+.section-title { font-size:32px; margin-bottom:12px; font-family:'Playfair Display', serif; }
+.highlight { color:#ffdd57; }
+
+/* Search */
+.search-wrap { margin: 18px auto 6px; max-width:800px; }
+#dest-search {
+  width:100%;
+  padding:12px 18px;
+  border-radius: 999px;
+  border: none;
+  outline:none;
+  background: rgba(255,255,255,0.06);
+  color:#fff;
+  font-size:16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+}
+#dest-search::placeholder { color: #ddd; }
+
+/* Grid + preview container layout */
+.grid-and-preview {
+  margin-top:28px;
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/* Grid */
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Card (anchor) */
+.dest-card {
+  display:block;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  color: #fff;
+  text-decoration: none;
+  min-height:110px;
+  position:relative;
+  overflow: hidden;
+}
+.dest-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#ffdd57;
+  margin-bottom:6px;
+}
+.dest-card p {
+  color:#eee;
+  font-size:14px;
+  line-height:1.5;
+}
+.dest-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); cursor:pointer; }
+
+/* Preview panel (side pop-up) */
+.preview-panel {
+  width: 360px;
+  max-width: 36vw;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 10px;
+  display: none; /* show when active */
+  position: absolute;
+  z-index: 9999;
+  transform-origin: left top;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.preview-panel.show {
+  display:block;
+  opacity:1;
+  pointer-events:auto;
+  transform: translateY(0);
+}
+
+/* preview inner */
+.preview-inner { display:flex; gap:12px; align-items:flex-start; }
+.preview-inner img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink:0;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+.preview-caption h4 {
+  color:#ffdd57;
+  font-size:18px;
+  margin-bottom:6px;
+  font-family:'Playfair Display', serif;
+}
+.preview-caption p { color:#eee; font-size:13px; line-height:1.4; }
+
+/* Responsive: move preview below grid for narrow screens */
+@media screen and (max-width: 980px) {
+  .grid-and-preview { flex-direction: column; }
+  .preview-panel { position: relative; width: 100%; max-width: none; display:block; opacity:1; pointer-events:auto; transform:none; margin-top:18px; }
+}
+
+/* Small screens: card spacing */
+@media screen and (max-width: 560px) {
+  .dest-card { padding:16px; min-height: auto; }
+  .preview-inner img { width: 120px; height: 88px; }
+}
+.navbar a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #ffdd57 !important;
+    text-decoration: none !important;
+}
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button same as nav link */
+.dropbtn {
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Dropdown content box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  min-width: 160px;
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+/* Items inside dropdown */
+.dropdown-content a {
+  color: white !important;
+  padding: 10px 15px;
+  text-decoration: none !important;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffdd57 !important;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover effect on main Travel button */
+.dropdown:hover .dropbtn {
+  color: #ffdd57 !important;
+  background: rgba(255,255,255,0.1);
+}
+.navbar a, 
+.navbar a:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar a:hover {
+    color: #ffdd57 !important;
+}
+/* ===================== FOOTER ===================== */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  padding: 40px 5%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.footer-box h3, .footer-box h4 {
+  margin-bottom: 15px;
+  color: #ffdd57;
+}
+
+.footer-box a {
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ffdd57;
+}

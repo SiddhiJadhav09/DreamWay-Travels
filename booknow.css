@@ -1,0 +1,120 @@
+/* ===================== BOOK NOW PAGE ===================== */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f6f6f6; /* clean background */
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 60px;
+  color: #f4d34d;
+  font-family: "Playfair Display", serif;
+}
+
+/* Glass Box */
+.booking-box {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 45px;
+  
+  background: rgba(255, 255, 255, 0.4);  /* more visible glass */
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(255, 255, 255, 0.3) inset;
+}
+
+/* Input + Select + Textarea */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 16px;
+
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  transition: 0.3s;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #555;
+}
+
+/* On Focus */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #f4d34d;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(244, 211, 77, 0.7);
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+}
+
+/* Price Display */
+#priceDisplay {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Button */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: #f4d34d;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #e0be44;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 211, 77, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .booking-box {
+    padding: 30px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}

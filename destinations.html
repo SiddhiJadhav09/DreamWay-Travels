@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Destinations — Dreamway</title>
+
+  <!-- Fonts (same as your site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="destinations.css">
+</head>
+<body>
+
+  <!-- Top header (reuse your site header if you have one) -->
+  <!-- ===================== HEADER (Same as Home Page) ===================== -->
+<!-- TOP NAVBAR -->
+<header class="top-header">
+  <div class="logo">
+    <h2>DreamWay Travels</h2>
+    <p>Your Journey, Your Story</p>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+  </div>
+</div>
+    <a href="gallery.html">Gallery</a>
+    <a href="Book Now.html">Book Now</a>
+
+    <div class="profile-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+           class="profile-icon"
+           onclick="toggleProfileMenu()">
+
+      <div class="profile-dropdown" id="profileDropdown">
+        <button onclick="openLogin()">Login</button>
+        <button onclick="openSignup()">Signup</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+  <!-- Banner -->
+  <section class="destination-banner">
+    <h1>Best of India</h1>
+  </section>
+
+  <!-- Search bar -->
+  <section class="destination-section">
+    <h2 class="section-title">Top <span class="highlight">Destinations</span></h2>
+
+    <div class="search-wrap">
+      <input id="dest-search" type="search" placeholder="Search destinations (e.g. Goa, Jaipur, Kashmir)..." aria-label="Search destinations">
+    </div>
+
+    <div class="grid-and-preview">
+      <!-- Grid -->
+      <div class="dest-grid" id="dest-grid">
+        <!-- Card example format:
+             <a class="dest-card" href="destination-pages/slug.html" data-image="images/slug.jpg" data-slug="slug">
+               <h3>Title</h3>
+               <p>Short description...</p>
+             </a>
+        -->
+        <a class="dest-card" href="destination-pages/agra.html" data-image="https://thumbs.dreamstime.com/b/taj-mahal-sunset-light-agra-india-72653577.jpg" data-slug="agra">
+          <h3>Agra</h3>
+          <p>Home to the iconic Taj Mahal, a UNESCO World Heritage site.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/goa.html" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnsTULNq9mxs3mDaxuNXXBhW-fxpH_Ols7zcDAO9tlZg&s=10" data-slug="goa">
+          <h3>Goa</h3>
+          <p>Famous for beaches, nightlife, and Portuguese architecture.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/jaipur.html" data-image="https://tse3.mm.bing.net/th/id/OIP.04hRykUQ0Pz5OYhqlZC9XgHaDt?pid=Api&P=0&h=220" data-slug="jaipur">
+          <h3>Jaipur</h3>
+          <p>The Pink City known for forts, palaces, and vibrant bazaars.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/munnar.html" data-image="https://tse4.mm.bing.net/th/id/OIP.53kM7VmFLcDleVskfkREcwHaEK?pid=Api&P=0&h=220" data-slug="munnar">
+          <h3>Munnar (Kerala)</h3>
+          <p>Misty hills, tea gardens, and calm backwaters.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/delhi.html" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5b0OkLJqaPRXwA6zfkxTlKqAWGo3HoQ4GQVjl7M6r-A&s=10" data-slug="delhi">
+          <h3>Delhi</h3>
+          <p>The capital city rich with culture, history, and monuments.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/mumbai.html" data-image="https://tse3.mm.bing.net/th/id/OIP.UVasaYs2knTBo_bd1-pfpwHaFg?pid=Api&P=0&h=220" data-slug="mumbai">
+          <h3>Mumbai</h3>
+          <p>City of dreams known for beaches, nightlife, and Bollywood.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/kashmir.html" data-image="https://tse1.mm.bing.net/th/id/OIP.oN7fF-ZS15NOIJpk1Dr-hgHaE6?pid=Api&P=0&h=220" data-slug="kashmir">
+          <h3>Kashmir</h3>
+          <p>Paradise on Earth with valleys, lakes, and snow peaks.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/shimla.html" data-image="https://tse4.mm.bing.net/th/id/OIP.mH9zz-WuKWDEWQsrUHATgAHaE8?pid=Api&P=0&h=220" data-slug="shimla">
+          <h3>Shimla</h3>
+          <p>A charming hill station surrounded by Himalayan beauty.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/manali.html" data-image="https://tse1.mm.bing.net/th/id/OIP.EBpQpBe1kp38hFmpGtd-0gHaE8?pid=Api&P=0&h=220" data-slug="manali">
+          <h3>Manali</h3>
+          <p>Adventure capital known for snow sports and mountains.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/udaipur.html" data-image="https://tse2.mm.bing.net/th/id/OIP.9YvFtohi2-1iBtKLgSFJMgHaDn?pid=Api&P=0&h=220" data-slug="udaipur">
+          <h3>Udaipur</h3>
+          <p>City of Lakes famous for palaces and royal heritage.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/jaisalmer.html" data-image="https://tse1.mm.bing.net/th/id/OIP.JwW5KHCLFVwJG5DToJgXOgHaE8?pid=Api&P=0&h=220" data-slug="jaisalmer">
+          <h3>Jaisalmer</h3>
+          <p>Golden desert city known for forts and camel safaris.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/rishikesh.html" data-image="https://tse3.mm.bing.net/th/id/OIP.EvtT81wLR1A7crBaltEQJQHaE7?pid=Api&P=0&h=220" data-slug="rishikesh">
+          <h3>Rishikesh</h3>
+          <p>Yoga capital of the world with rafting and peaceful ghats.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/darjeeling.html" data-image="https://tse1.mm.bing.net/th/id/OIP.76-Cz4cMwRPJGEs0HZ0NQgHaEO?pid=Api&P=0&h=220" data-slug="darjeeling">
+          <h3>Darjeeling</h3>
+          <p>Popular for tea plantations and beautiful sunrise views.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/hyderabad.html" data-image="https://tse4.mm.bing.net/th/id/OIP.VeeNSHd9KoxpP0DAn2wQtQHaEK?pid=Api&P=0&h=220" data-slug="hyderabad">
+          <h3>Hyderabad</h3>
+          <p>City of Pearls famous for Charminar and biryani.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/leh-ladakh.html" data-image="https://tse1.mm.bing.net/th/id/OIP.FG_6kHXTg86KUK1pQTdw3gHaC6?pid=Api&P=0&h=220" data-slug="leh-ladakh">
+          <h3>Leh-Ladakh</h3>
+          <p>High-altitude desert known for adventure and scenic landscapes.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/ooty.html" data-image="https://tse2.mm.bing.net/th/id/OIP.FEWcV03IKvojxrKMHYuNBgHaEI?pid=Api&P=0&h=220" data-slug="ooty">
+          <h3>Ooty</h3>
+          <p>Queen of Hills with botanical gardens and lakes.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/pondicherry.html" data-image="https://tse3.mm.bing.net/th/id/OIP.PbEO3-N_zWozaY4bAh6bXAHaDt?pid=Api&P=0&h=220" data-slug="pondicherry">
+          <h3>Pondicherry</h3>
+          <p>French-inspired coastal town with calm beaches.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/andaman.html" data-image="https://tse3.mm.bing.net/th/id/OIP.1SrluHBlK9QAZreq5zSlSwHaEU?pid=Api&P=0&h=220" data-slug="andaman">
+          <h3>Andaman</h3>
+          <p>Crystal-clear waters perfect for scuba diving and beaches.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/varanasi.html" data-image="https://tse4.mm.bing.net/th/id/OIP.HsCz6HMUq8F5YphTQKIj1QHaEy?pid=Api&P=0&h=220" data-slug="varanasi">
+          <h3>Varanasi</h3>
+          <p>One of the oldest living cities; spiritual ghats and rituals on the Ganges.</p>
+        </a>
+
+        <a class="dest-card" href="destination-pages/hampi.html" data-image="https://tse4.mm.bing.net/th/id/OIP.G-FALJdsW9Q7AXn15QZ8dgHaE8?pid=Api&P=0&h=220" data-slug="hampi">
+          <h3>Hampi</h3>
+          <p>Ancient ruins and UNESCO-listed landscapes with dramatic boulder-strewn terrain.</p>
+        </a>
+
+       
+
+        
+
+        
+
+      <!-- Side preview panel (hidden by default) -->
+      <aside id="preview-panel" class="preview-panel" aria-hidden="true">
+        <div class="preview-inner">
+          <img id="preview-img" src="" alt="preview image">
+          <div class="preview-caption">
+            <h4 id="preview-title"></h4>
+            <p id="preview-sub"></p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-box">
+    <h3>DreamWay Travels</h3>
+    <p>Turning moments into memories.</p>
+  </div>
+
+  <div class="footer-box">
+    <h4>Useful Links</h4>
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="Book Now.html">Book Now</a>
+  </div>
+
+  <div class="footer-box">
+    <h4>Contact</h4>
+    <p>Pune, India</p>
+    <p>dreamwaytravel@gmail.com</p>
+    <p>+91 9876543210</p>
+  </div>
+</footer>
+
+  <script src="destinations.js"></script>
+  <script>
+function toggleProfileMenu() {
+    let menu = document.getElementById("profileDropdown");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

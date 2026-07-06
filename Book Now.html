@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Now - DreamWay Travels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booknow.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="top-header">
+  <div class="logo">
+    <h2>DreamWay Travels</h2>
+    <p>Your Journey, Your Story</p>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="Book Now.html" style="color:#ffdd57;">Book Now</a>
+
+    <div class="profile-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="profile-icon" onclick="toggleProfileMenu()">
+      <div class="profile-dropdown" id="profileDropdown">
+        <button onclick="openLogin()">Login</button>
+        <button onclick="openSignup()">Signup</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ===================== BOOKING SECTION ===================== -->
+<section class="section">
+  <h2 class="section-title">
+    Plan Your <span class="highlight">Dream Journey</span>
+  </h2>
+
+  <div class="booking-box">
+    <form class="booking-form" id="bookingForm">
+
+      <div class="form-row">
+        <input id="fullName" type="text" placeholder="Full Name*" required>
+        <input id="contactNumber" type="tel" placeholder="Contact Number*" required>
+      </div>
+
+      <div class="form-row">
+        <input id="emailAddress" type="email" placeholder="Email*" required>
+        <select id="destinationSelect" required>
+          <option value="">Select Destination*</option>
+          <option>Himachal</option>
+          <option>Rajasthan</option>
+          <option>Meghalaya</option>
+          <option>Mumbai</option>
+          <option>Goa</option>
+          <option>Karnataka</option>
+        </select>
+      </div>
+
+      <!-- Travel Type & Payment Option -->
+      <div class="form-row">
+        <select id="travelType" required>
+          <option value="">Select Travel Type*</option>
+          <option value="Public">Public</option>
+          <option value="Private">Private</option>
+        </select>
+
+        <select id="paymentType" required>
+          <option value="">Payment Option*</option>
+          <option value="Online">Online</option>
+        </select>
+      </div>
+
+      <!-- Payment method (appears only when Online selected) -->
+      <div id="onlinePaymentContainer" style="display:none; margin-top:6px;">
+        <label for="paymentMethod" style="font-weight:600;">Choose Online Method*</label>
+        <select id="paymentMethod" style="width:100%; padding:12px; border-radius:12px; margin-top:8px;">
+          <option value="">Select Method</option>
+          <option value="UPI">UPI (QR)</option>
+          <option value="Card">Card</option>
+          <option value="NetBanking">Net Banking</option>
+        </select>
+
+        <div id="paymentMethodArea" style="margin-top:12px;"></div>
+      </div>
+
+      <div class="form-row" style="margin-top:8px;">
+        <input id="travelDate" type="date" required>
+        <input id="travelersNumber" type="number" placeholder="No. of Travelers*" min="1" required>
+      </div>
+
+      <div id="priceDisplay" style="font-weight:600; font-size:16px; margin-bottom:10px; color:#000;"></div>
+
+      <textarea id="specialRequest" placeholder="Any special request or message..." rows="4"></textarea>
+
+      <button class="btn-submit" id="confirmBookingBtn" style="margin-top: 20px;">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== Confirmation Modal ===================== -->
+<div id="confirmationModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); align-items:center; justify-content:center; z-index:9999;">
+  <div style="width:92%; max-width:520px; background:#fff; border-radius:14px; padding:22px; box-shadow:0 8px 30px rgba(0,0,0,0.3);">
+    <h3 id="modalTitle" style="margin-top:0; font-family:'Playfair Display', serif; color:#333;">Booking Confirmed</h3>
+    <p id="modalMsg" style="white-space:pre-wrap; color:#222;"></p>
+    <div style="display:flex; gap:10px; margin-top:16px;">
+      <button id="modalSendBtn" style="flex:1; padding:12px; border-radius:10px; font-weight:600; background:#f4d34d; border:none; cursor:pointer;">Send Confirmation</button>
+      <button id="modalCloseBtn" style="flex:1; padding:12px; border-radius:10px; background:#eee; border:none; cursor:pointer;">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-box">
+    <h3>DreamWay Travels</h3>
+    <p>Turning moments into memories.</p>
+  </div>
+
+  <div class="footer-box">
+    <h4>Useful Links</h4>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destination</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <div class="footer-box">
+    <h4>Contact</h4>
+    <p>Pune, India</p>
+    <p>dreamwaytravel@gmail.com</p>
+    <p>+91 9876543210</p>
+  </div>
+</footer>
+
+<!-- Inline small helpers (kept minimal) -->
+<script>
+function toggleProfileMenu(){
+  const d = document.getElementById('profileDropdown');
+  if(!d) return;
+  d.style.display = (d.style.display === 'flex') ? 'none' : 'flex';
+}
+function openLogin(){ alert('Open Login (placeholder)'); }
+function openSignup(){ alert('Open Signup (placeholder)'); }
+</script>
+
+<!-- External JS (main payment & submit logic) -->
+<script src="booknow.js"></script>
+</body>
+</html>

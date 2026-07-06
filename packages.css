@@ -1,0 +1,286 @@
+
+/* ===================== GLOBAL STYLES ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA1JiJRgIJfz19Klu4zC3G-W4mVJE2m0MsDqHXfaJQQlnHYXOddzbLumcZ&s=10') 
+        no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ===================== HEADER ===================== */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #ffdd57;
+    font-size: 32px;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #eee;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: white !important;
+}
+
+.navbar a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #ffdd57 !important;
+}
+
+/* ===================== PROFILE ICON ===================== */
+.profile-menu {
+    position: relative;
+}
+
+.profile-icon {
+    width: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ffdd57;
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.profile-dropdown button {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 15px black;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #ffdd57;
+}
+
+/* ===================== CARDS ===================== */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.7);
+    border-color: #ffdd57;
+}
+
+.card p {
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #ffdd57;
+}
+
+/* ===================== MODAL (LOGIN + SIGNUP + ITINERARY) ===================== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.modal-box {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.modal-box h2 {
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.modal-box input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ffdd57;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.btn-submit:hover {
+    background: #ffe370;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-box h3,
+.footer-box h4 {
+    color: #ffdd57;
+    margin-bottom: 15px;
+}
+
+.footer-box a {
+    color: white;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-box a:hover {
+    color: #ffdd57;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+
